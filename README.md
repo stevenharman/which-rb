@@ -1,16 +1,16 @@
 # Which
 
-Unix-like systems have long had a `which` command to identify the location to an executable.
-This is a Ruby library that does the same thing, but works across Unix-like systems, and Windows, consistently.
-It's meant for use within another Ruby library or application, rather than as a command line tool itself.
+Unix-like systems have long had a `which` command to identify the location of an executable.
+`Which` is a Ruby library that does the same thing, across Unix-like systems and Windows.
+It's meant for use within other Ruby libraries or applications, rather than as a command line tool itself.
 
-For example you might use it to auto-discover the path to a command line tool you need to shell out to.
+For example `Which` might be used to auto-discover the path to a command line tool your application needs to shell out to.
 Or similarly, to auto-configure the path to a command your tool is wrapping.
-For example, a wrapper for Ghostscript might use `Which` to auto-configure the path to `gs`.
+For example, a wrapper for [Ghostscript][ghostscript] might use `Which` to auto-configure the path to `gs`, and throw an error if it cannot be found.
 
 `Which` works by searching for the specified command along `$PATH`.
-It takes care to use OS-specific `$PATH`-separators, as well as Windows-specific executable file extensions.
-`Which` also ensures the command is actually executable, and is a file (and not a directory).
+It takes care to use OS-specific `$PATH`-separators, as well as Windows-specific executable file extensions (`$PATHEXT`).
+`Which` also ensures the command is really is an executable file (and not a directory).
 
 [ghostscript]: https://www.ghostscript.com "Ghostscript"
 
@@ -72,6 +72,7 @@ Then, run `bin/spec` to run the tests.
 You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 ### Local Install
+
 To install this gem onto your local machine, run `bin/rake install`.
 
 ### Cutting a new version
