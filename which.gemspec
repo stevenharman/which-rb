@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Find the path to an executable on your system; Unix which, in Ruby."
   spec.description = <<~DESC
-    Find the full path to an execuatble, based on the current $PATH and $PATHEXT (Windows).
+    Find the full path to an executable, based on the current $PATH and $PATHEXT (Windows).
     If the file is found, and it's executable, the full path is returned. Else, nil is returned.
     
         Which.call("git") #=> "/opt/homebrew/bin/git"

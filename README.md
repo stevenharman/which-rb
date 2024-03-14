@@ -1,4 +1,4 @@
-# A Unix-like which, for Ruby
+# Which
 
 Unix-like systems have long had a `which` command to identify the location to an executable.
 This is a Ruby library that does the same thing, but works across Unix-like systems, and Windows, consistently.
